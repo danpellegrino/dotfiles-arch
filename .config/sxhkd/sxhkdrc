@@ -146,23 +146,23 @@ super + {Left,Down,Up,Right}
 
 # volume up 
 XF86AudioRaiseVolume
-	pactl set-sink-volume @DEFAULT_SINK@ +5%
+	pulseaudio-ctl up +5%
 
 # raise small
 super + XF86AudioRaiseVolume
-        pactl set-sink-volume @DEFAULT_SINK@ +1% 
+        pulseaudio-ctl up +1% 
 
 # volume down
 XF86AudioLowerVolume 
-	pactl set-sink-volume @DEFAULT_SINK@ -5%
+	pulseaudio-ctl down +5%
 
 # lower small
 super + XF86AudioLowerVolume
-        pactl set-sink-volume @DEFAULT_SINK@ -1% 
+        pulseaudio-ctl down +1% 
 
 # mute volume
 XF86AudioMute 
-	pactl set-sink-mute @DEFAULT_SINK@ toggle &
+	pulseaudio-ctl mute
 
 # play media
 XF86AudioPlay 
